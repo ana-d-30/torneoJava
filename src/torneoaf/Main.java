@@ -86,6 +86,7 @@ public class Main {
             case 2:
             //#region Bucar Eq. y Jug.
                 GestorEquipos equipos_lista = new GestorEquipos();
+                //Se genera listado por default
                 equipos_lista.agregarE();
                 String nombre_Equipo1 = JOptionPane.showInputDialog("Ingrese el nombre del equipo");
                 equipos_lista.buscarE(nombre_Equipo1);
