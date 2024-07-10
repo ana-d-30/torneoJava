@@ -14,7 +14,42 @@ public class Main {
 		opcion = JOptionPane.showOptionDialog(null, "Bienvenido\nMenu pricipal", null, opcion, opcion, null, Opciones, Opciones[0]);
         switch (opcion) {
             case 0:
+            Equipo equipo1 = new Equipo("Boca", "CIUDAD2");
+               Equipo equipo2 = new Equipo("River", "CIUDAD2");
+               Equipo equipo3 = new Equipo("A", "CIUDAD2");
+               Equipo equipo4 = new Equipo("B", "CIUDAD2");
+               Equipo equipo5 = new Equipo("C", "CIUDAD2");
+               Equipo equipo6 = new Equipo("D", "CIUDAD2");
+               Equipo equipo7 = new Equipo("E", "CIUDAD2");
+               Equipo equipo8 = new Equipo("F", "CIUDAD2");
+       
+               Partido partido1 = new Partido();
+               partido1.getEquipos().add(equipo1);
+               partido1.getEquipos().add(equipo2);
+       
+               Partido partido2 = new Partido();
+               partido2.getEquipos().add(equipo3);
+               partido2.getEquipos().add(equipo4);
+       
+               Partido partido3 = new Partido();
+               partido3.getEquipos().add(equipo5);
+               partido3.getEquipos().add(equipo6);
+       
+               Partido partido4 = new Partido();
+               partido4.getEquipos().add(equipo7);
+               partido4.getEquipos().add(equipo8);
+       
+               Fases fase = new Fases();
+               fase.agregarPartido(partido1);
+               fase.agregarPartido(partido2);
+               fase.agregarPartido(partido3);
+               fase.agregarPartido(partido4);
+
+               fase.jugarFase();
+
+
             //#region partido
+            /* 
             Equipo grupo4 = new Equipo("BOCA", "CIUDAD1");
             Equipo grupo5 = new Equipo("RIVER", "CIUDAD2");
 
@@ -28,6 +63,7 @@ public class Main {
             } else {
                 JOptionPane.showMessageDialog(null, "No se puede comenzar partido");
             }
+            */
             break;
                 //#endregion
 
