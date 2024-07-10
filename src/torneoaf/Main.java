@@ -161,9 +161,9 @@ public class Main {
                     }
 
                 }
-                if (!jugadorEncontrado) {
-                    JOptionPane.showMessageDialog(null, "No se ha encontrado al jugador en ningún equipo");
-                }
+                //if (!jugadorEncontrado) {
+                    //JOptionPane.showMessageDialog(null, "No se ha encontrado al jugador en ningún equipo");
+                //}
                 break;
             //#endregion
             case 3:
