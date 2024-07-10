@@ -38,8 +38,6 @@ public class Equipo {
 		this.ciudad = ciudad;
 	}
 
-    //Agrego para los goles
-
 	@Override
 	public String toString() {
 		return "\nEquipo [nombre=" + nombre + ", ciudad=" + ciudad + ", jugadores=" + jugadores + "]";
@@ -57,7 +55,7 @@ public class Equipo {
 
 			return true;
 		} else {
-
+			// vuelve a consultar si se equivico de valor
 			cantidad = Integer.parseInt(JOptionPane.showInputDialog("Cantidad de jugadores de " + this.nombre
 					+ " incorrecta\nIngrese cantidad de jugadores nuevamente: "));
 			if (cantidad > 7 && cantidad < 12) {
@@ -124,15 +122,5 @@ public class Equipo {
 	        }
 	    }
 	}
-
-	// public void totalj(){
-	// JOptionPane.showMessageDialog(null, "Plantel total de jugadores: \n"+
-	// jugadores.size());
-	// }
-
-	// public void listaj(){
-	// JOptionPane.showMessageDialog(null, "Plantel de jugadores: " + this.nombre +
-	// jugadores);
-	// }
 
 }

@@ -23,7 +23,7 @@ public class Main {
             Equipo equipo7 = new Equipo("E", "CIUDAD2");
             Equipo equipo8 = new Equipo("F", "CIUDAD2");
 
-            // Crear instancias de partidos y asignar equipos
+            // Crear partidos y equipos
             Partido partido1 = new Partido();
             partido1.getEquipos().add(equipo1);
             partido1.getEquipos().add(equipo2);
@@ -40,7 +40,7 @@ public class Main {
             partido4.getEquipos().add(equipo7);
             partido4.getEquipos().add(equipo8);
 
-            // Crear instancia de fase y agregar partidos
+            // Crear fase
             Fases fase = new Fases();
             fase.agregarPartido(partido1);
             fase.agregarPartido(partido2);
@@ -69,10 +69,10 @@ public class Main {
                 case 6: equipoSeleccionado = equipo7; break;  // E
                 case 7: equipoSeleccionado = equipo8; break;  // F
                 case 8:
-                    // "Salir" se selecciona, no hacer nada más
+                    // "Salir" 
                     return;
                 default:
-                    // No se espera ninguna otra opción
+                    // 
                     JOptionPane.showMessageDialog(null, "Opción no válida");
                     return;
             }
@@ -85,25 +85,6 @@ public class Main {
                 JOptionPane.showMessageDialog(null, "Tu equipo " + equipoSeleccionado.getNombre() + " no ganó. El ganador es " + ganadorFinal + ".");
             }
 
-
-
-
-            //#region partido
-            /* 
-            Equipo grupo4 = new Equipo("BOCA", "CIUDAD1");
-            Equipo grupo5 = new Equipo("RIVER", "CIUDAD2");
-
-
-            if (grupo4.agregar() && grupo5.agregar()){
-                //Inicio de partido
-                JOptionPane.showMessageDialog(null, "Comienza el partido");
-                GestorEquipos partido = new GestorEquipos();
-                partido.jugar(grupo4, grupo5);
-
-            } else {
-                JOptionPane.showMessageDialog(null, "No se puede comenzar partido");
-            }
-            */
             break;
                 //#endregion
 
@@ -160,7 +141,7 @@ public class Main {
             //#endregion
 
             case 2:
-            //#region Bucar Eq. y Jug.
+            //#region Bucar Equipos. y Jugugadores.
                 GestorEquipos equipos_lista = new GestorEquipos();
                 //Se genera listado por default
                 equipos_lista.agregarE();

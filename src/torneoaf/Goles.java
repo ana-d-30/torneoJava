@@ -18,10 +18,4 @@ public class Goles {
         return goles;
     }
 
-    public int tiempo(Equipo A){
-        int tiempo = 90 + (int) (Math.random() * (120 - 90));
-        return tiempo;
-    }
-
-
 }

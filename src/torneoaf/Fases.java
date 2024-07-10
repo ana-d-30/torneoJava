@@ -42,7 +42,7 @@ public class Fases {
         }
 
         // Jugar la fase final
-        JOptionPane.showMessageDialog(null, "Comienza la fase final");
+        JOptionPane.showMessageDialog(null, "Comienza el partido final");
         Equipo equipo1 = partidos.get(0).getEquipos().get(0);
         Equipo equipo2 = partidos.get(0).getEquipos().get(1);
         Equipo ganadorFinal = partidos.get(0).resultado(equipo1, equipo2);
