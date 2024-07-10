@@ -17,6 +17,9 @@ public class Partido {
 
     public Equipo resultado(Equipo equipo1, Equipo equipo2){
         JOptionPane.showMessageDialog(null, "Se enfrentan " + equipo1.getNombre() + " vs " + equipo2.getNombre());
+            Tiempo tiempo_de_partido = new Tiempo();
+            int tiempo = tiempo_de_partido.tiempo();
+
 			Goles gol_es1 = new Goles();
             Goles gol_es2 = new Goles();
             int goles1=0;
@@ -33,18 +36,18 @@ public class Partido {
 
 			if (goles1>goles2) {
 				if (penal) {
-                    JOptionPane.showMessageDialog(null, "Gano equipo 1\nHubo penales \nCantidad de goles de equipo 1: "+goles1+"\nCantidad de goles de equipo 2: " + goles2);
+                    JOptionPane.showMessageDialog(null, "Gano equipo 1\nHubo penales \nCantidad de goles de equipo 1: "+goles1+"\nCantidad de goles de equipo 2: " +goles2+ "\nDuracion del partido: "+tiempo+"min");
                     return equipo1;
                 }else{
-				JOptionPane.showMessageDialog(null, "Gano equipo 1\nCantidad de goles de equipo 1: "+goles1+"\nCantidad de goles de equipo 2: " + goles2);
+				JOptionPane.showMessageDialog(null, "Gano equipo 1\nCantidad de goles de equipo 1: "+goles1+"\nCantidad de goles de equipo 2: " + goles2+ "\nDuracion del partido: "+tiempo+"min");
                 return equipo1;
                 }
 			} else {
                 if (penal) {
-                    JOptionPane.showMessageDialog(null, "Gano equipo 2\nHubo penales \nCantidad de goles de equipo 1: "+goles1+"\nCantidad de goles de equipo 2: " + goles2);
+                    JOptionPane.showMessageDialog(null, "Gano equipo 2\nHubo penales \nCantidad de goles de equipo 1: "+goles1+"\nCantidad de goles de equipo 2: " + goles2+ "\nDuracion del partido: "+tiempo+"min");
                     return equipo2;
                 }
-				JOptionPane.showMessageDialog(null, "Gano equipo 2\nCantidad de goles de equipo 1: "+goles1+"\nCantidad de goles de equipo 2: " + goles2);
+				JOptionPane.showMessageDialog(null, "Gano equipo 2\nCantidad de goles de equipo 1: "+goles1+"\nCantidad de goles de equipo 2: " + goles2+ "\nDuracion del partido: "+tiempo+"min");
                 return equipo2;
 			}
 

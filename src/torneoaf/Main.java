@@ -15,37 +15,77 @@ public class Main {
         switch (opcion) {
             case 0:
             Equipo equipo1 = new Equipo("Boca", "CIUDAD2");
-               Equipo equipo2 = new Equipo("River", "CIUDAD2");
-               Equipo equipo3 = new Equipo("A", "CIUDAD2");
-               Equipo equipo4 = new Equipo("B", "CIUDAD2");
-               Equipo equipo5 = new Equipo("C", "CIUDAD2");
-               Equipo equipo6 = new Equipo("D", "CIUDAD2");
-               Equipo equipo7 = new Equipo("E", "CIUDAD2");
-               Equipo equipo8 = new Equipo("F", "CIUDAD2");
-       
-               Partido partido1 = new Partido();
-               partido1.getEquipos().add(equipo1);
-               partido1.getEquipos().add(equipo2);
-       
-               Partido partido2 = new Partido();
-               partido2.getEquipos().add(equipo3);
-               partido2.getEquipos().add(equipo4);
-       
-               Partido partido3 = new Partido();
-               partido3.getEquipos().add(equipo5);
-               partido3.getEquipos().add(equipo6);
-       
-               Partido partido4 = new Partido();
-               partido4.getEquipos().add(equipo7);
-               partido4.getEquipos().add(equipo8);
-       
-               Fases fase = new Fases();
-               fase.agregarPartido(partido1);
-               fase.agregarPartido(partido2);
-               fase.agregarPartido(partido3);
-               fase.agregarPartido(partido4);
+            Equipo equipo2 = new Equipo("River", "CIUDAD2");
+            Equipo equipo3 = new Equipo("A", "CIUDAD2");
+            Equipo equipo4 = new Equipo("B", "CIUDAD2");
+            Equipo equipo5 = new Equipo("C", "CIUDAD2");
+            Equipo equipo6 = new Equipo("D", "CIUDAD2");
+            Equipo equipo7 = new Equipo("E", "CIUDAD2");
+            Equipo equipo8 = new Equipo("F", "CIUDAD2");
 
-               fase.jugarFase();
+            // Crear instancias de partidos y asignar equipos
+            Partido partido1 = new Partido();
+            partido1.getEquipos().add(equipo1);
+            partido1.getEquipos().add(equipo2);
+
+            Partido partido2 = new Partido();
+            partido2.getEquipos().add(equipo3);
+            partido2.getEquipos().add(equipo4);
+
+            Partido partido3 = new Partido();
+            partido3.getEquipos().add(equipo5);
+            partido3.getEquipos().add(equipo6);
+
+            Partido partido4 = new Partido();
+            partido4.getEquipos().add(equipo7);
+            partido4.getEquipos().add(equipo8);
+
+            // Crear instancia de fase y agregar partidos
+            Fases fase = new Fases();
+            fase.agregarPartido(partido1);
+            fase.agregarPartido(partido2);
+            fase.agregarPartido(partido3);
+            fase.agregarPartido(partido4);
+
+            String[] opcionesE = {
+                "Boca", "River", "A", "B", "C", "D", "E", "F", "Salir"
+            };
+
+            // Mostrar el menú y obtener la opción seleccionada
+            int opcionE = 0;
+            opcionE = JOptionPane.showOptionDialog(null, "Selecciona un equipo", null,
+                    JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE,
+                    null, opcionesE, opcionesE[0]);
+
+            // Crear un mapa de nombres de equipos a sus instancias
+            Equipo equipoSeleccionado = null;
+            switch (opcionE) {
+                case 0: equipoSeleccionado = equipo1; break;  // Boca
+                case 1: equipoSeleccionado = equipo2; break;  // River
+                case 2: equipoSeleccionado = equipo3; break;  // A
+                case 3: equipoSeleccionado = equipo4; break;  // B
+                case 4: equipoSeleccionado = equipo5; break;  // C
+                case 5: equipoSeleccionado = equipo6; break;  // D
+                case 6: equipoSeleccionado = equipo7; break;  // E
+                case 7: equipoSeleccionado = equipo8; break;  // F
+                case 8:
+                    // "Salir" se selecciona, no hacer nada más
+                    return;
+                default:
+                    // No se espera ninguna otra opción
+                    JOptionPane.showMessageDialog(null, "Opción no válida");
+                    return;
+            }
+
+            // Simular la fase del torneo y verificar el ganador
+            String ganadorFinal = fase.jugarFase();
+            if (equipoSeleccionado.getNombre().equals(ganadorFinal)) {
+                JOptionPane.showMessageDialog(null, "¡Ganó tu equipo " + equipoSeleccionado.getNombre() + "!");
+            } else {
+                JOptionPane.showMessageDialog(null, "Tu equipo " + equipoSeleccionado.getNombre() + " no ganó. El ganador es " + ganadorFinal + ".");
+            }
+
+
 
 
             //#region partido

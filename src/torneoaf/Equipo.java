@@ -38,6 +38,8 @@ public class Equipo {
 		this.ciudad = ciudad;
 	}
 
+    //Agrego para los goles
+
 	@Override
 	public String toString() {
 		return "\nEquipo [nombre=" + nombre + ", ciudad=" + ciudad + ", jugadores=" + jugadores + "]";

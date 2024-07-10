@@ -15,7 +15,7 @@ public class Fases {
         partidos.add(partido);
     }
 
-    public void jugarFase() {
+    public String jugarFase() {
         LinkedList<Equipo> ganadores = new LinkedList<>();
         int numeroFase = 1;
 
@@ -47,5 +47,6 @@ public class Fases {
         Equipo equipo2 = partidos.get(0).getEquipos().get(1);
         Equipo ganadorFinal = partidos.get(0).resultado(equipo1, equipo2);
         JOptionPane.showMessageDialog(null, "El ganador del torneo es: " + ganadorFinal.getNombre());
+        return ganadorFinal.getNombre();
     }
 }
